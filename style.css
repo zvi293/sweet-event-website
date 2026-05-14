@@ -772,7 +772,7 @@ a {
 }
 
 .video-wrapper {
-    max-width: 420px;
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
@@ -787,8 +787,7 @@ a {
         0 30px 80px rgba(0, 0, 0, 0.5),
         0 0 0 1px rgba(201, 165, 108, 0.3);
     background: #000;
-    aspect-ratio: 9/16;
-    max-height: 75vh;
+    aspect-ratio: 16/9;
 }
 
 .video-frame::before {
@@ -1537,11 +1536,7 @@ a {
     }
 
     .video-wrapper {
-        max-width: 350px;
-    }
-
-    .video-frame {
-        max-height: 70vh;
+        max-width: 100%;
     }
 
     .image-wrapper img {

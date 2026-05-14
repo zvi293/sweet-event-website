@@ -1,0 +1,214 @@
+/* ========================================
+   SWEET EVENT - Legal Pages Stylesheet
+   ======================================== */
+
+.legal-hero {
+    background: linear-gradient(135deg, var(--color-charcoal) 0%, #3D332B 50%, var(--color-charcoal) 100%);
+    padding: 160px 0 80px;
+    text-align: center;
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.legal-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(201, 165, 108, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(168, 83, 110, 0.15) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.legal-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.legal-hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(36px, 5vw, 56px);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.legal-hero h1 span {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.legal-hero p {
+    font-size: 18px;
+    color: var(--color-cream);
+    opacity: 0.85;
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+.legal-content {
+    background: var(--color-cream);
+    padding: 80px 0 100px;
+}
+
+.legal-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.legal-card {
+    background: var(--color-white);
+    padding: 60px 70px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+    border-top: 4px solid var(--color-gold);
+}
+
+.legal-card .last-updated {
+    color: var(--color-text-light);
+    font-size: 14px;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--color-cream-dark);
+    font-style: italic;
+}
+
+.legal-card h2 {
+    font-family: var(--font-serif);
+    font-size: 26px;
+    color: var(--color-charcoal);
+    margin: 40px 0 18px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 18px;
+}
+
+.legal-card h2:first-of-type {
+    margin-top: 0;
+}
+
+.legal-card h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 4px;
+    background: var(--gradient-gold);
+    border-radius: 2px;
+}
+
+.legal-card h3 {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    color: var(--color-charcoal-light);
+    margin: 25px 0 12px;
+    font-weight: 600;
+}
+
+.legal-card p,
+.legal-card ul,
+.legal-card ol {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--color-text);
+    margin-bottom: 18px;
+}
+
+.legal-card ul,
+.legal-card ol {
+    padding-left: 25px;
+}
+
+.legal-card li {
+    margin-bottom: 8px;
+}
+
+.legal-card strong {
+    color: var(--color-gold-dark);
+    font-weight: 600;
+}
+
+.legal-card a {
+    color: var(--color-gold-dark);
+    text-decoration: underline;
+    text-decoration-color: rgba(201, 165, 108, 0.4);
+    text-underline-offset: 3px;
+    transition: var(--transition-fast);
+}
+
+.legal-card a:hover {
+    color: var(--color-rose-deep);
+    text-decoration-color: var(--color-rose-deep);
+}
+
+.legal-card .info-box {
+    background: var(--color-blush-light);
+    border-left: 4px solid var(--color-rose);
+    padding: 20px 25px;
+    border-radius: 6px;
+    margin: 25px 0;
+}
+
+.legal-card .info-box p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-back {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.legal-back a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 38px;
+    background: var(--gradient-gold);
+    color: var(--color-white) !important;
+    border-radius: 50px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none !important;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-medium);
+}
+
+.legal-back a:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-strong);
+    color: var(--color-white) !important;
+}
+
+@media (max-width: 768px) {
+    .legal-hero {
+        padding: 130px 0 60px;
+    }
+
+    .legal-content {
+        padding: 50px 0 70px;
+    }
+
+    .legal-card {
+        padding: 40px 25px;
+    }
+
+    .legal-card h2 {
+        font-size: 22px;
+    }
+
+    .legal-card p,
+    .legal-card ul,
+    .legal-card ol {
+        font-size: 15px;
+    }
+}

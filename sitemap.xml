@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://sweet-event.netlify.app/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sweet-event.netlify.app/og-image.png</image:loc>
+      <image:title>Sweet Event - Diseñadora de Eventos</image:title>
+      <image:caption>Diseñadora de Eventos en Santiago, República Dominicana</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sweet-event.netlify.app/DAaxa9SO2ep(JPG).jpg</image:loc>
+      <image:title>Mesa de pasteles exclusiva</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sweet-event.netlify.app/IMG-20260514-WA0015.jpg</image:loc>
+      <image:title>Primer cumpleaños - Mi 1er año</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sweet-event.netlify.app/IMG-20260514-WA0019.jpg</image:loc>
+      <image:title>Primer cumpleaños - One Fast Racing</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sweet-event.netlify.app/IMG-20260514-WA0024.jpg</image:loc>
+      <image:title>Segundo cumpleaños - Masha y el Oso</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://sweet-event.netlify.app/DAaxa9SO2ep(JPG).jpg</video:thumbnail_loc>
+      <video:title>Sweet Event - Mis Trabajos en Movimiento</video:title>
+      <video:description>Video promocional de los trabajos de Sweet Event - Diseñadora de Eventos</video:description>
+      <video:content_loc>https://sweet-event.netlify.app/video.mp4</video:content_loc>
+      <video:duration>50</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <!-- Política de Privacidad -->
+  <url>
+    <loc>https://sweet-event.netlify.app/politica-privacidad.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Términos de Uso -->
+  <url>
+    <loc>https://sweet-event.netlify.app/terminos-uso.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Accesibilidad -->
+  <url>
+    <loc>https://sweet-event.netlify.app/accesibilidad.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

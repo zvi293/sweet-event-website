@@ -1,0 +1,56 @@
+# robots.txt for Sweet Event
+# https://sweet-event.netlify.app/
+
+# Allow all search engines
+User-agent: *
+Allow: /
+Disallow: /*.json$
+
+# Specific bot directives
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+Allow: /og-image.png
+
+User-agent: facebookexternalhit
+Allow: /
+Allow: /og-image.png
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Crawl-delay (in seconds)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://sweet-event.netlify.app/sitemap.xml
+
+# Host directive
+Host: https://sweet-event.netlify.app

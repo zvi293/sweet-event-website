@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Main background gradient -->
+    <linearGradient id="bgMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C2620"/>
+      <stop offset="50%" style="stop-color:#3D332B"/>
+      <stop offset="100%" style="stop-color:#2C2620"/>
+    </linearGradient>
+
+    <!-- Gold gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C887"/>
+      <stop offset="50%" style="stop-color:#C9A56C"/>
+      <stop offset="100%" style="stop-color:#A88654"/>
+    </linearGradient>
+
+    <!-- Rose gradient -->
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8A4B0"/>
+      <stop offset="100%" style="stop-color:#C97B8A"/>
+    </linearGradient>
+
+    <!-- Decoration glow -->
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#C9A56C;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#C9A56C;stop-opacity:0"/>
+    </radialGradient>
+
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#C97B8A;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#C97B8A;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Filter for glow -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Main Background -->
+  <rect width="1200" height="630" fill="url(#bgMain)"/>
+
+  <!-- Decorative glows -->
+  <ellipse cx="200" cy="180" rx="350" ry="280" fill="url(#glow1)"/>
+  <ellipse cx="1000" cy="500" rx="320" ry="260" fill="url(#glow2)"/>
+  <ellipse cx="950" cy="100" rx="220" ry="180" fill="url(#glow1)" opacity="0.6"/>
+
+  <!-- Decorative gold lines -->
+  <line x1="60" y1="60" x2="180" y2="60" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <line x1="60" y1="60" x2="60" y2="180" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+
+  <line x1="1140" y1="570" x2="1020" y2="570" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <line x1="1140" y1="570" x2="1140" y2="450" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+
+  <!-- Top subtitle -->
+  <text x="600" y="150"
+        font-family="'Brush Script MT', 'Lucida Handwriting', cursive"
+        font-size="44"
+        font-style="italic"
+        fill="#E8C887"
+        text-anchor="middle"
+        font-weight="600">✦ Diseñadora de Eventos ✦</text>
+
+  <!-- "Sweet" - Script font -->
+  <text x="600" y="320"
+        font-family="'Brush Script MT', 'Lucida Handwriting', cursive"
+        font-size="180"
+        font-style="italic"
+        fill="url(#roseGrad)"
+        text-anchor="middle"
+        font-weight="700"
+        filter="url(#softGlow)">Sweet</text>
+
+  <!-- Decorative divider -->
+  <line x1="450" y1="370" x2="750" y2="370" stroke="url(#goldGrad)" stroke-width="2"/>
+  <circle cx="600" cy="370" r="6" fill="url(#goldGrad)"/>
+  <circle cx="600" cy="370" r="3" fill="#FAF5EF"/>
+
+  <!-- "EVENT" - Bold serif -->
+  <text x="600" y="450"
+        font-family="'Playfair Display', 'Georgia', serif"
+        font-size="92"
+        letter-spacing="28"
+        fill="url(#goldGrad)"
+        text-anchor="middle"
+        font-weight="500">EVENT</text>
+
+  <!-- Tagline -->
+  <text x="600" y="525"
+        font-family="'Playfair Display', 'Georgia', serif"
+        font-size="26"
+        font-style="italic"
+        fill="#F4DCDF"
+        text-anchor="middle"
+        font-weight="400"
+        opacity="0.9">Convirtiendo momentos especiales</text>
+  <text x="600" y="558"
+        font-family="'Playfair Display', 'Georgia', serif"
+        font-size="26"
+        font-style="italic"
+        fill="#F4DCDF"
+        text-anchor="middle"
+        font-weight="400"
+        opacity="0.9">en recuerdos inolvidables</text>
+
+  <!-- Location tag -->
+  <text x="600" y="610"
+        font-family="'Montserrat', sans-serif"
+        font-size="16"
+        letter-spacing="6"
+        fill="#C9A56C"
+        text-anchor="middle"
+        font-weight="400"
+        opacity="0.85">SANTIAGO · REPÚBLICA DOMINICANA</text>
+
+  <!-- Small decorative elements -->
+  <g opacity="0.5">
+    <circle cx="280" cy="220" r="2" fill="#C9A56C"/>
+    <circle cx="320" cy="200" r="1.5" fill="#C9A56C"/>
+    <circle cx="900" cy="420" r="2" fill="#C97B8A"/>
+    <circle cx="940" cy="400" r="1.5" fill="#C97B8A"/>
+  </g>
+
+  <!-- Corner decorations -->
+  <g opacity="0.4" fill="url(#goldGrad)">
+    <circle cx="100" cy="500" r="3"/>
+    <circle cx="1100" cy="130" r="3"/>
+  </g>
+</svg>

@@ -54,6 +54,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    overflow-x: hidden;
 }
 
 body {
@@ -62,12 +63,20 @@ body {
     line-height: 1.7;
     background: var(--color-cream);
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
-img {
+img, video, svg {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* Prevent horizontal overflow */
+section {
+    max-width: 100vw;
+    overflow-x: clip;
 }
 
 a {
@@ -763,10 +772,11 @@ a {
 }
 
 .video-wrapper {
-    max-width: 900px;
+    max-width: 420px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
+    width: 100%;
 }
 
 .video-frame {
@@ -777,7 +787,8 @@ a {
         0 30px 80px rgba(0, 0, 0, 0.5),
         0 0 0 1px rgba(201, 165, 108, 0.3);
     background: #000;
-    aspect-ratio: 16/9;
+    aspect-ratio: 9/16;
+    max-height: 75vh;
 }
 
 .video-frame::before {
@@ -795,7 +806,8 @@ a {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
+    background: #000;
 }
 
 .video-play-overlay {
@@ -1274,15 +1286,14 @@ a {
 .lightbox {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(44, 38, 32, 0.95);
     z-index: 9999;
     align-items: center;
     justify-content: center;
+    padding: 70px 80px;
     animation: fadeIn 0.3s;
+    box-sizing: border-box;
 }
 
 .lightbox.active {
@@ -1290,42 +1301,52 @@ a {
 }
 
 .lightbox-img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     animation: zoomIn 0.4s;
+    display: block;
 }
 
 .lightbox-close {
     position: absolute;
-    top: 30px;
-    right: 40px;
-    font-size: 50px;
+    top: 20px;
+    right: 25px;
+    font-size: 44px;
     color: var(--color-white);
     cursor: pointer;
     transition: var(--transition-fast);
     line-height: 1;
     user-select: none;
+    z-index: 10001;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .lightbox-close:hover {
     color: var(--color-gold-light);
-    transform: rotate(90deg);
+    background: rgba(255,255,255,0.1);
 }
 
 .lightbox-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
-    background: rgba(255,255,255,0.1);
-    border: 2px solid rgba(255,255,255,0.3);
+    width: 55px;
+    height: 55px;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.35);
     color: var(--color-white);
     border-radius: 50%;
-    font-size: 40px;
+    font-size: 38px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1333,6 +1354,7 @@ a {
     transition: var(--transition-fast);
     line-height: 1;
     padding-bottom: 5px;
+    z-index: 10001;
 }
 
 .lightbox-nav:hover {
@@ -1340,8 +1362,8 @@ a {
     border-color: transparent;
 }
 
-.lightbox-prev { right: 30px; }
-.lightbox-next { left: 30px; }
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -1489,29 +1511,97 @@ a {
         height: 26px;
     }
 
-    .lightbox-nav {
-        width: 45px;
-        height: 45px;
-        font-size: 30px;
+    .lightbox {
+        padding: 60px 15px;
     }
 
-    .lightbox-prev { right: 15px; }
-    .lightbox-next { left: 15px; }
+    .lightbox-nav {
+        width: 42px;
+        height: 42px;
+        font-size: 28px;
+        background: rgba(0, 0, 0, 0.5);
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .lightbox-prev { left: 8px; }
+    .lightbox-next { right: 8px; }
 
     .lightbox-close {
-        top: 20px;
-        right: 25px;
-        font-size: 40px;
+        top: 12px;
+        right: 12px;
+        font-size: 36px;
+        width: 44px;
+        height: 44px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+    }
+
+    .video-wrapper {
+        max-width: 350px;
+    }
+
+    .video-frame {
+        max-height: 70vh;
+    }
+
+    .image-wrapper img {
+        height: 380px;
+    }
+
+    .image-accent {
+        width: 120px;
+        height: 120px;
+        bottom: -15px;
+        right: -15px;
+    }
+
+    .contact-wrapper {
+        padding: 35px 22px;
+        gap: 35px;
+    }
+
+    .contact-info h3,
+    .contact-form-wrapper h3 {
+        font-size: 24px;
+    }
+
+    .footer-logo img {
+        height: 65px;
+    }
+
+    .footer-tagline {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    .footer-social {
+        gap: 14px;
+        margin-bottom: 30px;
+    }
+
+    .footer-social a {
+        width: 44px;
+        height: 44px;
+    }
+
+    .footer-social a svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-links {
+        font-size: 13px;
+        gap: 8px;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 20px;
+        padding: 0 18px;
     }
 
     .nav-container {
-        padding: 0 20px;
+        padding: 0 18px;
     }
 
     .gallery-grid {
@@ -1524,11 +1614,136 @@ a {
     }
 
     .contact-wrapper {
-        padding: 30px 20px;
+        padding: 28px 18px;
     }
 
     .hero-subtitle {
         font-size: 22px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .image-wrapper img {
+        height: 320px;
+    }
+
+    .service-card {
+        padding: 35px 22px;
+    }
+
+    .service-title {
+        font-size: 22px;
+    }
+
+    .video-wrapper {
+        max-width: 100%;
+    }
+
+    .play-button {
+        width: 70px;
+        height: 70px;
+    }
+
+    .play-button svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .working-hours h4 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-title-script {
+        font-size: 70px;
+        margin-bottom: -10px;
+    }
+
+    .hero-title-main {
+        font-size: 36px;
+        letter-spacing: 6px;
+    }
+
+    .hero-subtitle {
+        font-size: 19px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .section-subtitle {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 13px 24px;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .about-text .lead {
+        font-size: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .footer-sep {
+        display: none;
+    }
+
+    .lightbox-nav {
+        width: 38px;
+        height: 38px;
+        font-size: 24px;
+    }
+}
+
+/* ===== LANDSCAPE PHONES ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: 90px 0 40px;
+    }
+
+    .hero-title-script {
+        font-size: 60px;
+        margin-bottom: -5px;
+    }
+
+    .hero-title-main {
+        font-size: 32px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .carousel-indicators {
+        bottom: 20px;
     }
 }
 

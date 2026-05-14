@@ -1241,6 +1241,24 @@ a {
     letter-spacing: 1px;
 }
 
+.footer-credit {
+    font-size: 12px;
+    color: var(--color-text-light);
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+.footer-credit a {
+    color: var(--color-gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.footer-credit a:hover {
+    opacity: 0.75;
+}
+
 /* ===== WHATSAPP FLOATING ===== */
 .whatsapp-float {
     position: fixed;
